@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
@@ -12,257 +11,270 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
-    
+
     body {
-      box-sizing: border-box;
       margin: 0px;
       padding: 0px;
-      background-color: #F3EAE3;
-    }
-    #flex {
-      display: flex;
-      position: absolute;
-      top: 80px;
-      left: 28%;
-      border: 10px;
-    }
+      box-sizing: border-box;
+      background-color: hsl(30, 38%, 92%);
+      }
 
-    .image-dsktp{
-      width: 295px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+    .flex {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .img_dsk {
+      border-top-left-radius: 0.6em;
+      border-bottom-left-radius: 0.6em;
+      /*box-shadow: 3px 2px #888;*/
     }
 
     .flex2 {
-      background-color: hsl(0, 0%, 100%);
-      width: 295px;
-      height: 460px;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-    }
-
-    .P1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      position:relative;
-      top: 18px;
-      left: 30px;
-      color: #8B8B97;
-      letter-spacing: 5px;
-    }
-
-    .P2 {
-      font-family: 'Fraunces', serif;
-      font-size: 33px;
-      font-weight: 700;
-      line-height: 30px;
-      padding: 45px;
-      position: relative;
-      top: -42px;
-      right: 16.5px;
- 
-    }
-
-    .P3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 25px;
-      color: #8B8B97;
-      padding: 20px;
-      position: relative;
-      top: -120px;
-      left: 7px;
-    }
-
-    .price {
-      display: flex;
-    }
-
-    .price1 {
-      font-family: 'Fraunces', serif;
-      font-size: 33px;
-      font-weight: 700;
-      color: #547A6B;
-      margin-top: -135px;
-      margin-left: 33px;
-
-    }
-
-    .price2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
-      font-weight: 500;
-      color: #8B8B97;
-      margin-top: -125px;
-      margin-left: 25px;
-    }
-
-    button {
-      display: flex;
-      background-color: #3D8168;
-      color: #E7F9F1;
-      width: 230px;
-      margin-left: 33px;
-      margin-top: -70px;
-      padding: 7px;
-      border: 0px;
-      border-radius: 8px;
-    }
-    
-    button img {
-      position: relative;
-      top: 8px;
-      left: 65px;
-    }
-
-    button p {
-      padding: 10px;
-      margin: 0px;
-      margin-left: 65px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    button:hover  {
-      background-color: #1A4031;
-    }
-
-    .attribution { font-size: 11px; text-align: center; display: none;}
-    .attribution a { color: hsl(228, 45%, 44%); }
-
-    @media (max-width: 400px ) {
-      body{
-        box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
-      }
-
-      #flex {
-        display: inline-block;
-        width: 310px;
-        position: absolute;
-        top: -10px;
-        left: 5px;
-        margin: 25px;
-      }
-
-      .image-dsktp {
-        display: none;
-      }
-
-      .image-mobile {
-        display: block !important;
-        width: 290px;
-        margin-left: 13px;
-        position: relative;
-        top: 6px;
-        right: 6px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;       
-      }
-
-      .flex2 {
-        width: 290px;
-        height: 310px;
-        position: relative;
-        left: 6.5px;
-        bottom: 6px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-      }
-
-      .P1 {
-        width: 120px;
-        top: 15px;
-        left: 20px;
-      }
-
-      .P2 {
-        width: 240px;
-        font-size: 27px;
-        padding: 3px;
-        position: relative;
-        top: -5px;
-        left: 17px;
-      }
-
-      .P3 {
-        width: 270px;
-        font-size: 13px;
-        padding: 5px;
-        margin-top: 115px;
-        position: relative;
-        left: 15px;
-      }
-
-      .price {
-        padding: 0px;
-        position: relative;
-        bottom: 135px;
-      }
-
-      .price1 {
-        margin: 0px;
-        margin-left: 25px;
-      }
-
-      .price2 {
-        margin: 0px;
-        margin-left: 20px;
-        padding-top: 10px;
-      }
-
-      button {
-        position: relative;
-        top: -55px;
-        left: -4px;
-        padding: 6px;
-      }
-      
-      button p { 
-        padding: 6px;
-      }
-
-      .attribution {
-        margin-top: 0px;
-      }
+      max-width: 19em;
+      height: 450px;
+      margin-bottom: 3px;
+      background-color: #fff;
+      border-top-right-radius: 0.6em;
+      border-bottom-right-radius: 0.6em;
+      /*box-shadow: 0.5px 2px 1px #888;*/
       
     }
    
-  </style>
+    .inn {
+      margin: 2em;
+    }
+
+    .para_1 {
+      font-size: 0.75em;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.4em;
+      color: hsl(228, 12%, 48%);
+    }
+
+    .inn h1 {
+      font-size: 2em;
+      font-weight: 700;
+      font-family: 'Fraunces', serif;
+      /*border: black 1px solid;*/
+      line-height: 1em;
+      width: 200px;
+      margin-top: 22px;
+      
+    }
+
+    .para_2 {
+      font-size: 0.9375em;
+      font-weight: 400;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.5em;
+      color: hsl(228, 12%, 48%);
+      /*border: black 1px solid;*/
+    }
+
+    .price {
+      height: 40px;
+      display: flex;
+      align-items: center;
+      /*border: black 1px solid;*/
+    }
+
+    .price1 {
+      font-size: 1.9em;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      color: hsl(158, 36%, 37%);
+      /*border: black 1px solid;*/
+      margin-right: 25px;
+    }
+
+    .price2 {
+      font-size: 0.75em;
+      font-weight: 400;
+      color: hsl(228, 12%, 48%);
+      font-family: 'Montserrat', sans-serif;
+      align-items: center;
+      /*border: black 1px solid;*/
+      padding: 0px;
+      height: 15px;
+    }
+
+    button {
+      height: 48px;
+      width: 240px;
+      margin-top: 25px;
+      border: 0px;
+      border-radius: 0.6em;
+      background-color: hsl(158, 36%, 37%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    button img {
+      margin-right: 0.8em;
+    }
+
+    button p {
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+    }
+
+    button:hover {
+      background-color: #1A4031;
+    }
+
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media screen and (max-width: 400px ) {
+      .flex {
+        min-height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img_dsk {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px; 
+        border-bottom-left-radius: 0em;
+        margin-bottom: -10px;
+        box-shadow: none;
+      }
+      .flex2 {
+        max-width: 21em;
+        height: 370px;
+        background-color: #fff;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0.6em;
+        border-bottom-right-radius: 0.6em;
+        /*box-shadow: 0.5px 2px 1px #888;*/
+        
+      }
+      .inn {
+        margin: 1.5em;
+      }
+
+      .para_1 {
+        font-size: 0.75em;
+        font-weight: 500;
+        font-family: 'Montserrat' sans-serif;
+        letter-spacing: 0.4em;
+        color: hsl(228, 12%, 48%);
+      }
+
+      .inn h1 {
+        font-size: 2em;
+        font-weight: 700;
+        font-family: 'Fraunces', serif;
+        /*border: black 1px solid;*/
+        line-height: 1em;
+        width: 290px;
+        margin-top: 10px;
+        
+      }
+      .para_2 {
+        font-size: 15px;
+        font-weight: 400;
+        font-family: 'Montserrat' sans-serif;
+        line-height: 1.5em;
+        color: hsl(228, 12%, 48%);
+        /*border: black 1px solid;*/
+        margin-top: -12px;
+      }
+
+      .price {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        /*border: black 1px solid;*/
+      }
+
+      .price1 {
+        font-size: 1.9em;
+        font-weight: 700;
+        font-family: 'Fraunces', serif;
+        color: hsl(158, 36%, 37%);
+        /*border: black 1px solid;*/
+        margin-right: 25px;
+      }
+
+      .price2 {
+        font-size: 0.75em;
+        font-weight: 400;
+        color: hsl(228, 12%, 48%);
+        font-family: 'Montserrat', sans-serif;
+        align-items: center;
+        /*border: black 1px solid;*/
+        padding: 0px;
+        height: 15px;
+      }
+
+      button {
+        height: 48px;
+        width: 280px;
+        margin-top: 17px;
+        border: 0px;
+        border-radius: 0.6em;
+        background-color: hsl(158, 36%, 37%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      button img {
+        margin-right: 0.8em;
+      }
+
+      button p {
+        font-size: 15px;
+        font-weight: 700;
+        font-family: 'Montserrat' sans-serif;
+        color: #fff;
+      }
+
+      button:hover {
+        background-color: #1A4031;
+      }
+    }
+
+ </style>
 </head>
 <body>
-  <section id="flex">
-    <img src="./images/image-product-desktop.jpg" alt="Image of perfume" height="460" class="image-dsktp">
-    <img src="./images/image-product-mobile.jpg" alt="Image of perfume" style="display: none;" class="image-mobile" >
+  <main class="flex">
+    <picture> 
+      <source media="(max-width: 400px)" width="335px" srcset="images/image-product-mobile.jpg">
+      <img class="img_dsk" media="(min-width: 900px)"height="450px" srcset="images/image-product-desktop.jpg">
+    </picture>
     
-
-    <div class="flex2"> 
-      <p class="P1">PERFUME</p>
+    <article class="flex2"> 
+      <div class="inn">
+        <p class="para_1">PERFUME</p>
   
-      <p class="P2">Gabrielle Essence Eau De Parfum</p> 
-    
-      <p class="P3">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-        Perfumer-Creator for the House of CHANEL.</p>
-    
-      <div class="price">
-        <p class="price1">$149.99</p>
-        <p class="price2"><s>$169.99</s></p>
+        <h1>Gabrielle Essence Eau De Parfum</h1> 
+      
+        <p class="para_2">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+      
+        <div class="price">
+          <span class="price1">$149.99</span>
+          <span class="price2"><s>$169.99</s></span>
+        </div>
+        <button type="button"> 
+          <img src="/images/icon-cart.svg" alt="">
+          <p>Add to Cart</p>
+        </button>
       </div>
-    
-      <button type="button"> <img src="./images/icon-cart.svg" alt=""><p>Add to Cart</p> </button> 
-    </div>
-  </section>
-
-  
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="modade97.github.io">modadeOS</a>.
-  </div>
+    </article>
+  </main>
 </body>
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="modade97.github.io">modadeOS</a>.
+</footer>
 </html>
